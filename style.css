@@ -1,0 +1,85 @@
+html{
+
+    box-sizing: border-box;
+
+}
+body{
+
+    margin: 0;
+
+}
+div{
+
+    margin: 1em;
+
+}
+button{
+
+    margin: .5em;
+    padding: .6em 1em;
+    cursor: pointer;
+    color: white;
+    background: rgb(66, 65, 65);
+    outline: none;
+    border: none;
+    width: 100%;
+
+}
+.btnDelete{
+
+    margin: .2em .1em;
+    background: red;
+
+}
+.btnOpen{
+
+    margin: .2em .1em;
+    background: green;
+
+}
+button:hover{
+
+    background: rgb(107, 106, 106);
+
+}
+input{
+
+    padding: .5em;
+
+}
+input:focus{
+
+    outline-color: rgb(66, 65, 65);
+
+}
+.container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.table-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.table-container{
+
+    width: 50%;
+
+}
+.table-container td{
+
+    text-align: center;
+
+}
+.table-container table{
+
+    width: 100%;
+
+}

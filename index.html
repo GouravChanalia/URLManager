@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-container">
+            <form>
+                <table>
+                <tr>
+                    <td>Website:</td>
+                    <td><input type="text" id="domain"</td>
+                </tr>
+                <tr>
+                    <td>URL:</td>
+                    <td><input type="text" id="url"</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit" id="add">Add</button>
+                </tr>
+                </table>
+            </form>
+        </div>
+        <div class="table-container">
+            <table id="myTable" border="1">
+                <tr>
+                    <th>Website</th>
+                    <th>URL</th>
+                    <th>Action</th>
+                </tr>
+            </table>
+            <Button id="openAll">Open All</Button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
