@@ -1,0 +1,2 @@
+# URLManager
+This Website is made to keep this in mind that most of us Struggle to open different website. There are cases when we want to open 10 different websites at the same time. Now, To open 10 different websites can be really frustrating task. But now, You can Open as many websites as you want with a single button click. Website is Live, please Visit , try, and share your valuable comments 
