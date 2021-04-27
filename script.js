@@ -8,7 +8,7 @@ let cellDomain, cellURL, cellAction, btnDelete, btnOpenUrl
 
 const isOccupied = () => domain.value != '' && url.value != ''
 
-const addRow = ( domain, url ) => {
+const addRow = ( domain, url, flag = 0) => {
 
     //Creating and adding row and cells in the table
     const row = table.insertRow( table.rows.length )
@@ -26,9 +26,11 @@ const addRow = ( domain, url ) => {
     cellAction = row.insertCell(2);
 
     cellDomain.innerHTML = domain;
+    cellDomain.style.fontSize = "1.1em"
     cellURL.innerHTML = url;
 
     cellAction.appendChild( btnOpenUrl )
+    if( !flag )
     cellAction.appendChild( btnDelete )
 
 
@@ -71,14 +73,22 @@ const callback = event => {
 
 }
 
-if( !localStorage.getItem( 'table' ) )
-localStorage.setItem( 'table', JSON.stringify([]) )
+if( !localStorage.getItem( 'table' ) ){
 
-let list = JSON.parse(localStorage.getItem( 'table' ))
+
+    const value = []
+
+    value.push( {domain:"URL Manager", url:"https://github.com/GouravChanalia/URLManager"} )
+
+    localStorage.setItem( 'table', JSON.stringify( value ))
+    
+}
+
+let list = JSON.parse( localStorage.getItem( 'table' ) )
 
 console.log( list )
 
-list.forEach( ({domain, url}) => addRow( domain,url ))
+list.forEach( ({domain, url}, index) => index!=0?addRow( domain,url ):addRow( domain,url,1 ))
 
 addBtn.addEventListener( 'click', callback )
 
