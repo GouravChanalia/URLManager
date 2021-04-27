@@ -28,8 +28,8 @@ const addRow = ( domain, url ) => {
     cellDomain.innerHTML = domain;
     cellURL.innerHTML = url;
 
-    cellAction.appendChild( btnDelete )
     cellAction.appendChild( btnOpenUrl )
+    cellAction.appendChild( btnDelete )
 
 
     btnDelete.addEventListener( 'click', () => { 
