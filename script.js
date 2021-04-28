@@ -88,7 +88,7 @@ let list = JSON.parse( localStorage.getItem( 'table' ) )
 
 console.log( list )
 
-list.forEach( ({domain, url}, index) => index!=0?addRow( domain,url ):addRow( domain,url,1 ))
+list.forEach( ({domain, url}, index) => domain === 'URL Manager' && url === 'https://github.com/GouravChanalia/URLManager' ?addRow( domain,url,1 ):addRow( domain,url))
 
 addBtn.addEventListener( 'click', callback )
 
