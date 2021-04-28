@@ -33,7 +33,6 @@ const addRow = ( domain, url, flag = 0) => {
     if( !flag )
     cellAction.appendChild( btnDelete )
 
-
     btnDelete.addEventListener( 'click', () => { 
 
         list = list.filter( ({url}) => url != row.cells[1].innerHTML )
@@ -88,7 +87,7 @@ let list = JSON.parse( localStorage.getItem( 'table' ) )
 
 console.log( list )
 
-list.forEach( ({domain, url}, index) => domain === 'URL Manager' && url === 'https://github.com/GouravChanalia/URLManager' ?addRow( domain,url,1 ):addRow( domain,url))
+list.forEach( ({domain, url}, index) => new RegExp('URL Manager','i').test(domain) && url === 'https://github.com/GouravChanalia/URLManager' ?addRow( domain,url,1 ):addRow( domain,url))
 
 addBtn.addEventListener( 'click', callback )
 
